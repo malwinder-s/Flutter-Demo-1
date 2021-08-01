@@ -1,4 +1,5 @@
 import 'dart:convert' as convert;
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -21,11 +22,8 @@ class _PostsPageState extends State<PostsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Sample App'),
-      ),
-      body: ListView.builder(
+    return Container(
+      child: ListView.builder(
         itemCount: widgets.length,
         itemBuilder: (BuildContext context, int position) {
           return getRow(position);
@@ -37,7 +35,7 @@ class _PostsPageState extends State<PostsPage> {
   Widget getRow(int i) {
     return Padding(
       padding: EdgeInsets.all(10.0),
-      child: Text("Row ${widgets[i]["title"]}"),
+      child: Text("--------Row--------\n${widgets[i]}\n\n"),
     );
   }
 

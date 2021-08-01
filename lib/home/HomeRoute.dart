@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo_1/home/PostsPage.dart';
+import 'package:flutter_app_demo_1/home/image_pick/ImagePickWidget.dart';
 
+import 'navigation/MapRoute.dart';
 import 'signature/Signature.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -81,12 +83,12 @@ class HomeRouteState extends State<HomeRoute> {
     switch (_currentIndex) {
       case 0:
         return PostsPage();
-      // case 1:
-      //   return
-      // case 2:
-      //   return "alarms";
-      // case 3:
-      //   return "wifi";
+      case 1:
+        return MapSample();
+      case 2:
+        return ImagePickWidget();
+      case 3:
+        return Signature();
       default:
         return Signature();
     }
